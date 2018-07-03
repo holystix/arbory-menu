@@ -1,0 +1,41 @@
+{
+    "name": "cubeagency/arborymenu",
+    "description": ":description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "Janis Osenieks",
+            "email": "janis.osenieks@cube.lv",
+            "homepage": "author homepage"
+        }
+    ],
+    "homepage": "https://github.com/cubeagency/arborymenu",
+    "keywords": ["Laravel", "ArboryMenu"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "orchestra/testbench": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CubeAgency\\ArboryMenu\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CubeAgency\\ArboryMenu\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CubeAgency\\ArboryMenu\\ArboryMenuServiceProvider"
+            ],
+            "aliases": {
+                "ArboryMenu": "CubeAgency\\ArboryMenu\\Facades\\ArboryMenu"
+            }
+        }
+    }
+}
