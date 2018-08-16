@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int                                               $id
  * @property \Carbon\Carbon|null                               $created_at
  * @property \Carbon\Carbon|null                               $updated_at
- * @property int                                               $menu_id
+ * @property int                                               $arbory_menu_id
  * @property int|null                                          $position
  * @property string|null                                       $name
  * @property string|null                                       $link
@@ -21,7 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read \Arbory\Base\Content\Relation                $relation
  * @method static \Illuminate\Database\Eloquent\Builder|ArboryMenuItem whereCreatedAt( $value )
  * @method static \Illuminate\Database\Eloquent\Builder|ArboryMenuItem whereId( $value )
- * @method static \Illuminate\Database\Eloquent\Builder|ArboryMenuItem whereMenuId( $value )
+ * @method static \Illuminate\Database\Eloquent\Builder|ArboryMenuItem whereArboryMenuId( $value )
  * @method static \Illuminate\Database\Eloquent\Builder|ArboryMenuItem wherePosition( $value )
  * @method static \Illuminate\Database\Eloquent\Builder|ArboryMenuItem whereUpdatedAt( $value )
  * @method static \Illuminate\Database\Eloquent\Builder|ArboryMenuItem whereLink( $value )
@@ -39,7 +39,7 @@ class ArboryMenuItem extends Model
      * @var array
      */
     protected $fillable = [
-        'menu_id',
+        'arbory_menu_id',
         'position',
         'name',
         'link'

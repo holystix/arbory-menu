@@ -15,16 +15,16 @@ class ArboryMenuServiceProvider extends ServiceProvider
     {
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'cubeagency');
         // $this->loadViewsFrom(__DIR__.'/../resources/views', 'cubeagency');
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadMigrationsFrom( __DIR__ . '/../database/migrations' );
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         // Publishing is only necessary when using the CLI.
-        if ($this->app->runningInConsole()) {
+        if ( $this->app->runningInConsole() ) {
 
             // Publishing the configuration file.
-            $this->publishes([
-                __DIR__.'/../config/arborymenu.php' => config_path('arborymenu.php'),
-            ], 'arborymenu.config');
+            $this->publishes( [
+                __DIR__ . '/../config/arborymenu.php' => config_path( 'arborymenu.php' ),
+            ], 'arborymenu.config' );
 
             // Publishing the views.
             /*$this->publishes([
@@ -53,12 +53,12 @@ class ArboryMenuServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/arborymenu.php', 'arborymenu');
+        $this->mergeConfigFrom( __DIR__ . '/../config/arborymenu.php', 'arborymenu' );
 
         // Register the service the package provides.
-        $this->app->singleton('arborymenu', function ($app) {
+        $this->app->singleton( 'arborymenu', function ( $app ) {
             return new ArboryMenu;
-        });
+        } );
     }
 
     /**
@@ -68,6 +68,6 @@ class ArboryMenuServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['arborymenu'];
+        return [ 'arborymenu' ];
     }
 }
