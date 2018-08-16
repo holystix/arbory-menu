@@ -26,4 +26,9 @@ class ArboryMenu extends Model
     {
         return $this->name;
     }
+
+    public function items()
+    {
+        return $this->hasMany( ArboryMenuItem::class )->orderBy( "position" );
+    }
 }
